@@ -96,10 +96,10 @@ async def ocrPDF(message, cDIR, lang_code):
                 input_file = open(f"{cDIR}/inPut.pdf", "rb"),
                 output_file = open(f"{cDIR}/outPut.pdf", "wb"),deskew = True
             )
-            tTXT, tBTN = await translate(text="PROCESS['ocr']", lang_code="ar")
+            tTXT, tBTN = await translate(text="PROCESS['ocr']", lang_code=lang_code)
             return tTXT
         except Exception:
-            tTXT, tBTN = await translate(text="PROCESS['ocrError']", lang_code="ar")
+            tTXT, tBTN = await translate(text="PROCESS['ocrError']", lang_code=lang_code)
             await message.edit(tTXT)
             return False
     except Exception as e:
