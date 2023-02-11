@@ -61,7 +61,7 @@ async def encryptPDF(cDIR, password, lang_code):
 async def compressPDF(message, cDIR, lang_code):
     try:
         # Initialize the library
-        PDFNet.Initialize(); doc = PDFDoc(f"{cDIR}/inPut.pdf")
+        PDFNet.Initialize("demo:1676040759361:7d2a298a03000000006027df7c81c9e05abce088e7286e8312e5e06886"); doc = PDFDoc(f"{cDIR}/inPut.pdf")
         # Optimize PDF with the default settings
         doc.InitSecurityHandler()
         # Reduce PDF size by removing redundant information and
