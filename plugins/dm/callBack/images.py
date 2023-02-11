@@ -109,7 +109,7 @@ async def _extract(bot, callbackQuery):
                         singlePages.remove(k)
                 singlePages = list(needPages.text.replace(',',':').split(':'))
                 # PAGE NUMBER LESS THAN 100
-                if 1 <= len(singlePages) <= 100:
+                if 1 <= len(singlePages) <= 200000000000000000000000000000000000000000000:
                     # CHECK IS PAGE NUMBER A DIGIT(IF ADD TO A NEW LIST)
                     if not known:
                         newList = singlePages
